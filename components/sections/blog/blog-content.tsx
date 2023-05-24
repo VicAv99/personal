@@ -21,5 +21,23 @@ export function BlogContent({ bodyCode }: BlogContentProps) {
 
 const mdxComponents: MDXComponents = {
   // Override the default <a> element to use the next/link component.
-  a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
+  a: ({ children, ...props }) => {
+    // check if external
+    let isExternal = false;
+    if (props.href?.startsWith("http")) {
+      isExternal = true;
+    }
+
+    return (
+      // @ts-expect-error legacy refs
+      <Link
+        {...props}
+        href={props.href || ""}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+      >
+        {children}
+      </Link>
+    );
+  },
 };
