@@ -1,13 +1,10 @@
 import { HomeSection } from "~/components/sections/home/home-intro";
-import { allPosts } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 import { PostCard } from "~/components/post-card";
 import Link from "next/link";
+import { descPosts } from "~/lib/posts";
 
 export default function Home() {
-  const posts = allPosts.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+  const posts = descPosts().slice(0, 3);
 
   return (
     <main>

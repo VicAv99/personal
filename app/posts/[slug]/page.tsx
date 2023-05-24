@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ScrollIndicator } from "~/components/scroll-indicator";
 import { BlogContent } from "~/components/sections/blog/blog-content";
 import { BlogInfo } from "~/components/sections/blog/blog-info";
+import { findPost } from "~/lib/posts";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -10,8 +11,13 @@ export async function generateStaticParams() {
   }));
 }
 
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const post = findPost(params.slug);
+  return { title: post?.title };
+};
+
 export default async function Page({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post = findPost(params.slug);
 
   if (!post) notFound();
 
