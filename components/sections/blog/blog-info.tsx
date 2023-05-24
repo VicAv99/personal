@@ -10,7 +10,7 @@ export function BlogInfo({ post }: BlogInfoProps) {
   return (
     <div>
       <NavLink
-        href="/blog"
+        href="/posts"
         buttonProps={{ className: "p-0 mb-3 text-cyan-500" }}
       >
         <Icon className="w-4" name="ArrowLeft" />

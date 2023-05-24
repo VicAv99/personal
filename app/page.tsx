@@ -1,5 +1,4 @@
 import { HomeSection } from "~/components/sections/home";
-import Toolbar from "~/components/toolbar";
 import { allPosts, Post } from "contentlayer/generated";
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";

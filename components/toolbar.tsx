@@ -1,7 +1,7 @@
 import { NavLink } from "./nav-link";
 import Image from "next/image";
 
-export default function Toolbar() {
+export function Toolbar() {
   return (
     <div className="my-5">
       <nav className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -16,7 +16,7 @@ export default function Toolbar() {
         </div>
         <div>
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
+          <NavLink href="/posts">Posts</NavLink>
           <NavLink buttonProps={{ disabled: true }} href="/portfolio">
             Portfolio
           </NavLink>

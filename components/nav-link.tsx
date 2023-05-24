@@ -11,8 +11,8 @@ type NavLinkProps = PropsWithChildren<
 >;
 
 export const NavLink = ({ children, buttonProps, ...props }: NavLinkProps) => {
-  const segment = useSelectedLayoutSegment() ?? "/";
-  const active = props.href === `${segment}`;
+  const segment = useSelectedLayoutSegment();
+  const active = props.href === `/${segment}`;
 
   return (
     <Button asChild variant="link" size="sm" {...buttonProps}>
