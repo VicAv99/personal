@@ -9,13 +9,10 @@ interface PostCardProps {
 export function PostCard({ post }: PostCardProps) {
   return (
     <div className="hover:bg-slate-100 p-3 rounded-md cursor-pointer">
-      <div className="space-y-2">
-        <Link
-          href={post.url}
-          className="text-cyan-700 text-xl hover:text-blue-900"
-        >
+      <Link href={post.url} className="space-y-2">
+        <div className="text-cyan-700 text-xl hover:text-blue-900">
           {post.title}
-        </Link>
+        </div>
         <div className="flex justify-between">
           <time dateTime={post.date} className="block text-xs text-gray-600">
             {format(parseISO(post.date), "LLLL d, yyyy")}
@@ -26,7 +23,7 @@ export function PostCard({ post }: PostCardProps) {
             100 views
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
