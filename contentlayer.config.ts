@@ -1,6 +1,7 @@
 import { defineDocumentType, makeSource } from "@contentlayer/source-files";
 import rehypePrismPlus from "rehype-prism-plus";
 import remarkGfm from "remark-gfm";
+import readingTime from "reading-time";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -13,6 +14,7 @@ export const Post = defineDocumentType(() => ({
     featured: { type: "boolean", required: false },
   },
   computedFields: {
+    readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
     url: {
       type: "string",
       resolve: (post) => `/posts/${post._raw.flattenedPath}`,

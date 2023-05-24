@@ -30,7 +30,7 @@ export function BlogInfo({ post }: BlogInfoProps) {
             <time>{format(parseISO(post.date), "LLLL d, yyyy")}</time>
           </div>
           <div className="flex items-center gap-x-1 md:gap-x-2">
-            <span>2min</span>
+            <span>{post.readingTime.text}</span>
             <span>•</span>
             100 views
           </div>

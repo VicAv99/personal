@@ -1,10 +1,10 @@
 import { HomeSection } from "~/components/sections/home/home-intro";
 import { PostCard } from "~/components/post-card";
 import Link from "next/link";
-import { descPosts } from "~/lib/posts";
+import { descFeaturedPosts } from "~/lib/posts";
 
 export default function Home() {
-  const posts = descPosts().slice(0, 3);
+  const posts = descFeaturedPosts();
 
   return (
     <main>
