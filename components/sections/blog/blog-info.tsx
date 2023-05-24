@@ -1,3 +1,4 @@
+import { format, parseISO } from "date-fns";
 import { Post } from "~/.contentlayer/generated";
 import { NavLink } from "~/components/nav-link";
 import { Icon } from "~/components/ui/icon";
@@ -26,7 +27,7 @@ export function BlogInfo({ post }: BlogInfoProps) {
           <div className="flex items-center gap-x-1 md:gap-x-2">
             <time>Victor Avila</time>
             <span>•</span>
-            <time>{post.date}</time>
+            <time>{format(parseISO(post.date), "LLLL d, yyyy")}</time>
           </div>
           <div className="flex items-center gap-x-1 md:gap-x-2">
             <span>2min</span>
