@@ -4,7 +4,7 @@ import Link, { LinkProps } from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { PropsWithChildren } from "react";
 import { Button, ButtonProps } from "./ui/button";
-import { cn } from "~/lib/utils";
+import { cn } from "~/lib/cn";
 
 type NavLinkProps = PropsWithChildren<
   { buttonProps?: ButtonProps } & LinkProps

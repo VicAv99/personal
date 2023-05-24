@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import "./globals.css";
 import { Nunito } from "next/font/google";
-import { cn } from "~/lib/utils";
+import { cn } from "~/lib/cn";
 
 const inter = Nunito({ subsets: ["latin"] });
 
