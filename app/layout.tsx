@@ -3,6 +3,7 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import { cn } from "~/lib/cn";
 import { Toolbar } from "~/components/toolbar";
+import { Footer } from "~/components/footer";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Toolbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
