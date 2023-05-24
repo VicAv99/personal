@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import "./globals.css";
 import { Nunito } from "next/font/google";
+import { cn } from "~/lib/utils";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -14,7 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          inter.className,
+          "container max-w-[65ch] p-7 bg-slate-50 md:p-0"
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

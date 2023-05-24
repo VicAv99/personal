@@ -1,3 +1,9 @@
+import Toolbar from "~/components/toolbar";
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <Toolbar />
+    </main>
+  );
 }
