@@ -25,8 +25,6 @@ export function BlogInfo({ post }: BlogInfoProps) {
       <div className="pt-4 text-zinc-400">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-x-1 md:gap-x-2">
-            <time>Victor Avila</time>
-            <span>•</span>
             <time>{format(parseISO(post.date), "LLLL d, yyyy")}</time>
           </div>
           <div className="flex items-center gap-x-1 md:gap-x-2">
