@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
+import { ScrollIndicator } from "~/components/scroll-indicator";
 import { BlogContent } from "~/components/sections/blog/blog-content";
 import { BlogInfo } from "~/components/sections/blog/blog-info";
 
@@ -16,6 +17,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
+      <ScrollIndicator />
       <BlogInfo post={post} />
       <hr className="border-(t t-neutral-700) mt-4 mb-6" />
       <BlogContent bodyCode={post.body.code} />
