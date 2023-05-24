@@ -1,0 +1,77 @@
+.markup {
+  :where(h2, h3, h4) {
+    @apply mt-9 mb-5 leading-5;
+  }
+
+  :where(table, img, blockquote) {
+    @apply my-6;
+  }
+
+  :where(p) {
+    @apply my-4;
+  }
+
+  :where(ul, ol):not(:first-child) {
+    @apply my-6 mx-0;
+  }
+
+  :where(ul, ol) :where(ul, ol) {
+    // margin-top should be the same as the gap of list items.
+    @apply mt-1 mx-0 mb-0;
+  }
+
+  > *:first-child {
+    @apply mt-0;
+  }
+
+  :where(h2) {
+    @apply font-bold text-2xl pb-2 border-b border-b-slate-200;
+  }
+
+  :where(h3) {
+    @apply font-bold text-xl;
+  }
+
+  :where(h4) {
+    @apply font-bold text-lg;
+  }
+
+  :where(a) {
+    @apply text-cyan-500 font-medium hover:underline;
+  }
+
+  :where(code):not([class*="language-"]) {
+    @apply bg-gray-100 border border-slate-400 rounded-md font-mono font-medium overflow-auto;
+  }
+
+  :where(pre):not([class*="language-"]) {
+    // Firefox doesn't support :has() yet, but OK as not so important.
+    &:has(code) {
+      @apply my-8;
+    }
+  }
+
+  :where(blockquote) {
+    @apply pl-4 border-l-2 border-l-slate-400 rounded-md bg-slate-100 p-3;
+  }
+
+  :where(ul, ol) {
+    @apply pl-6 flex flex-col gap-2;
+  }
+
+  :where(ul) {
+    list-style: disc;
+  }
+
+  :where(ul[class~="contains-task-list"]) {
+    list-style: none;
+  }
+
+  :where(ol) {
+    list-style: decimal;
+  }
+
+  :where(p) {
+    line-height: 1.75;
+  }
+}
