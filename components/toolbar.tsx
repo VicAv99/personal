@@ -5,7 +5,7 @@ export function Toolbar() {
   return (
     <div className="my-5">
       <nav className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-        <div className="relative w-14 h-14">
+        <div className="relative w-12 h-12">
           <Image
             fill
             src="/images/profile-birds.jpg"
