@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import "./globals.css";
 import { Nunito } from "next/font/google";
 import { cn } from "~/lib/cn";
+import Toolbar from "~/components/toolbar";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           "container max-w-[65ch] p-7 bg-slate-50 md:p-0"
         )}
       >
+        <Toolbar />
         {children}
       </body>
     </html>
