@@ -44,6 +44,14 @@ export const metadata: Metadata = {
     siteName: "Victor Avila's Website",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: `/images/profile-birds.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Victor Avila's site",
+      },
+    ],
   },
   robots: {
     index: true,
