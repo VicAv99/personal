@@ -16,9 +16,6 @@ export default function Home() {
             <PostCard key={post._id} post={post} />
           ))}
         </div>
-        <Link href="/posts" className="text-xs text-cyan-500">
-          Check out all posts &gt;&gt;
-        </Link>
       </div>
     </main>
   );

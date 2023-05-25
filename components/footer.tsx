@@ -8,7 +8,7 @@ interface FooterProps {}
 
 export function Footer(props: FooterProps) {
   return (
-    <div className="w-full">
+    <div className="w-full mt-16">
       <div className="bottom-0 float-right mb-5 mr-8">
         <Button asChild variant="outline" className="mx-1.5 bg-white">
           <Link target="_blank" href="https://twitter.com/victoravila__">
