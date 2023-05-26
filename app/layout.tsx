@@ -5,6 +5,7 @@ import { cn } from "~/lib/cn";
 import { Toolbar } from "~/components/toolbar";
 import { Footer } from "~/components/footer";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Nunito({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Toolbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
